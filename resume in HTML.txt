@@ -1,0 +1,148 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    
+    .container {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6-iU1bgrA5n_3bQFx4UHi50nOvLkF0gNlpg&usqp=CAU');
+      background-size: cover;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+    }
+
+    .education, .experience {
+      margin-top: 20px;
+    }
+
+    .education h2, .experience h2 {
+      margin-bottom: 20px;
+    }
+
+    .skillset {
+      margin-top: 20px;
+    }
+
+    .skills {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <body   background= "https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg";>
+    <div class="container">
+    <div class="header">
+      <h1 style="color:brown;" align="center"><u>RESUME</u></h1>
+      <img src="https://live.staticflickr.com/65535/49622496197_dd6a2d7c69_z.jpg" height="200" width="200" border="1"/>
+      <h1 class="name">VIDYA KRISHNAN S</h1>
+      <div class="contact-info">
+        <p>Email:<a href="mailto:vidyakrishnans148@gmail.com">vidyakrishnans148@gmail.com</a></p>
+        <p>Phone:94XXXXXXXX</p>
+        <p>Address:XYZ Road,Gandhi Nagar,Kollam,Kerala</p>
+      </div>
+    </div>
+
+    <div class="education">
+      <h2>Education</h2>
+      <ul>
+        <li> B.Tech in Computer Science</li>
+        <li>University: <a href="https://www.amrita.edu/admissions/">Amrita Vishwa Vidyapeetham</a></li>
+        <li>Expected Graduation: December 2026</li>
+      </ul>
+    
+    <h2>Skills</h2></font>
+    <ul>
+      <li>Programming Languages: C++, C, Python</li>
+      <li>Web Development: HTML, CSS</li>
+      <li>Database Management: SQL</li>
+    </ul>
+    <br> </div>
+    <h2 style="color:Red;"><u>Education Qualification</u></h2>
+    <table border="5px" style="color:black;">
+      <tr>
+        <th>Sl no.</th>
+        <th>Education</th>
+        <th>University/Institution</th>
+        <th>Major /field of study</th>
+        <th>Year of passing out</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>B-Tech</td>
+        <td>Amrita Vishwa Vidyapeetham</td>
+        <td>CSE</td>
+        <td>Pursuing</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>12th Grade</td>
+        <td>St.Vincent School</td>
+        <td>Computer Science</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>10th Grade</td>
+        <td>Sabarigiri Residential School</td>
+        <td>All subjects</td>
+        <td>2020</td>
+      </tr>
+    </table>
+    <div class="experience">
+      <h2>Experience</h2>
+      <p><strong>Frontend Developer</strong> - Wipro</p>
+      <ul>
+        <li>Member of ABC app development team </li>
+        <li>Hosted a hackathon</li>
+      </ul>
+    </div>
+
+    <div class="skillset">
+      <h2>Skillset</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <br>
+      <h2 style="color:Red;"><u>Objective</u></h2>
+      <h3 style="color:black;">A fresher who wishes to equip myself with additional skills and hone my leardership skills by working with a team that enables me to develop and work hard.</h3>
+      
+      <br>
+      <iframe src="https://www.amrita.edu/school/engineering/amritapuri/" frameborder="0" width="500" height="300"></iframe>
+    </div>
+  </div>
+</body>
+</html>
+
+

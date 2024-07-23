@@ -1,0 +1,468 @@
+<html>
+<head>
+  <title>Kerala Kaleidoscope</title>
+  <!-- Add the viewport meta tag for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8; /* Changed background color to light gray */
+      background-image: url("https://th.bing.com/th/id/R.16204d3bfa1dedb57cab08265a7428de?rik=yHccmWWURc2KnA&riu=http%3a%2f%2fwww.brandgradients.com%2fimg%2fbackgrounds%2fwhite-gradient-background.png&ehk=q1BUqQ5GWlp176K6uLeLaK4OxPdvLqBdyoWs4qn3naI%3d&risl=&pid=ImgRaw&r=0");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5); 
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px; 
+    }
+
+    .title h1 {
+      font-family: 'Special Elite', cursive;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .title h3 {
+      color: yellow;
+      margin: 0;
+    }
+
+    .logo {
+      width: 80px; 
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-right: 10px;
+    }
+
+    .icons-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; 
+      margin-top: 30px;
+    }
+
+    .icon {
+      text-align: center;
+      color: white; 
+      font-size: 13px;
+      font-weight: bold;
+      width: 120px; 
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s; 
+      padding: 10px; 
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+      border-radius: 10px; 
+    }
+
+    .icon i {
+      margin-bottom: 10px; 
+    }
+
+    .icon p {
+      margin: 0;  }
+
+    .icon:hover {
+      transform: scale(1.1); 
+    }
+
+    .districts-heading {
+      color: blue;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+
+    .boxes-container {
+      text-align: center;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;  }
+
+    .box {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-color: white;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      cursor: pointer;
+      border-radius: 10px; 
+      overflow: hidden; 
+      transition: transform 0.3s ease-in-out; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    .box-info-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: normal;
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column;
+    }
+
+    .box-title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: blue;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .box:hover .box-info-overlay {
+      display: flex;
+    }
+
+    .paradise-bay-heading {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 40px 0;
+      color: blue;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .captivating-voyages-heading {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 40px 0;
+      color: blue;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .box video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.boxes-container {
+  text-align: center;
+position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.box {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  border-radius: 10px; 
+  overflow: hidden; 
+  transition: transform 0.3s ease-in-out; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.box-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px; 
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white; 
+  border-bottom-left-radius: 10px; 
+  border-bottom-right-radius: 10px;
+}
+
+ .sacred-spectacles-heading{
+      font-size: 24px;
+      font-weight: bold;
+     
+      margin: 100px ;
+      color: blue;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    
+.sacred-spectacles-heading {
+  text-align: center; 
+  margin-top: 50px; }
+
+
+  
+
+.checkbox-section {
+  flex: 0 0 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.checkbox-form {
+  margin-bottom: 10px; 
+}
+
+     footer {
+  background-color: #007bff;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid #00a8cc;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <img class="logo" src="https://4.bp.blogspot.com/-B7VvGfRnyX4/WIGhKsdceVI/AAAAAAAABkA/V7-liePALZ8br1qMcz_Nr0QIOeS6g8OJgCLcB/s640/kerala.jpg" alt="Kerala Logo">
+      <h1>Kerala Kaleidoscope</h1>
+      <h3>"Unveiling the Treasures of Kerala"</h3>
+    </div>
+    <!-- Icons section below the header -->
+    <div class="icons-container">
+      <div class="icon" onclick="scrollToParadiseBay()">
+        <i class="fas fa-globe"></i>
+        <p>Top Destinations</p>
+      </div>
+      <div class="icon" onclick="scrollToCaptivatingVoyages()">
+        <i class="fas fa-tasks"></i>
+        <p>Things to Do</p>
+      </div>
+      <div class="icon" onclick="scrollToSacredSpectacles()">
+       
+        <i class="fas fa-praying-hands"></i>
+        <p>Tradition and Rituals</p>
+      </div>
+      <!-- Add the new icons -->
+      <div class="icon">
+        <i class="fas fa-history"></i>
+        <p>History</p>
+      </div>
+      <div class="icon">
+        <i class="fas fa-book"></i>
+        <p>E-books</p>
+      </div>
+      <div class="icon">
+        <i class="fas fa-camera"></i>
+        <p>SEARCH</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Heading for Districts -->
+  <div class="districts-heading">DISTRICTS</div>
+
+  <!-- Boxes section with scroll icon -->
+  <div class="boxes-container">
+    <div class="box" style="background-image: url('https://4.bp.blogspot.com/-XH_dfWBJySw/V5TpWlPNNOI/AAAAAAAAA5g/MaG5bzb8pYoWl5FuKwlffrAXeblRTrjOQCLcB/w1200-h630-p-k-no-nu/Bekal-Fort-Kasargod-ABC_2651-900x600.jpg'); background-size: cover;" onclick="scrollToParadiseBay()">
+      <div class="box-info-overlay">
+        Kasaragod known for its scenic beauty, historic forts, and cultural diversity.
+      </div>
+      <div class="box-title" style="color: white; font-weight: bold;">KASARAGOD</div>
+    </div>
+    <div class="box" style="background-image:url('https://i.pinimg.com/originals/7c/01/f5/7c01f592a3de0f69e8718e010cee12b5.jpg');background-size: cover;" onclick="scrollToParadiseBay()">
+      <div class="box-info-overlay">
+        Kannur renowned for its pristine beaches, vibrant Theyyam performances, and rich colonial heritage.
+      </div>
+      <div class="box-title" style="color: white; font-weight: bold;">KANNUR</div>
+    </div>
+    <div class="box" style="background-image:url('https://www.budgetwayfarers.com/wp-content/uploads/2017/12/Meenmutty-Waterfalls-8.jpg');background-size: cover;" onclick="scrollToParadiseBay()">
+      <div class="box-info-overlay">
+        Wayanad known for its lush green landscapes, misty hills, and diverse wildlife.
+      </div>
+      <div class="box-title" style="color: white; font-weight: bold;">WAYANAD</div>
+    </div>
+  </div>
+
+  <div class="paradise-bay-heading" id="paradise-bay">PARADISE BAY</div>
+
+  <div class="boxes-container">
+    <div class="box" onclick="scrollToParadiseBay()">
+      <video autoplay muted loop poster="https://static.india.com/wp-content/uploads/2019/01/Munnar.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="https://st4.depositphotos.com/8509220/21634/v/600/depositphotos_216348496-stock-video-aerial-shot-beautiful-tea-plantations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="box-info-overlay">
+        "Munnar - Where Serenity Meets Splendor, Embracing Nature's Beauty Amidst Misty Hills and Lush Tea Plantations."
+      </div>
+      <div class="box-title">Munnar</div>
+    </div>
+    <div class="box" onclick="scrollToParadiseBay()">
+      <video autoplay muted loop poster="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b6/37/09/beach-view.jpg?w=900&h=-1&s=1" style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="https://media.istockphoto.com/id/1218372220/video/aerial-view-of-traditional-indian-houseboat-near-alleppey-on-kerala-backwaters.mp4?s=mp4-640x640-is&k=20&c=TMEHLbDnUOZzkca_V4pj5eJcAJSM2WTWciG7KnqXQK4=" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="box-info-overlay">
+        "Alappuzha - The Venice of the East,<br> Where Tranquil Backwaters and <br>Enchanting Houseboats Beckon<br> You to Unwind and <br>Discover Kerala's Timeless Charms."
+      </div>
+      <div class="box-title">Alappuzha</div>
+    </div>
+    <div class="box" onclick="scrollToParadiseBay()">
+      <video autoplay muted loop poster="https://th.bing.com/th/id/OIP.e8AYwwi8OdARz4HUH4ffIQHaE7?pid=ImgDet&w=800&h=532&rs=1" style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="https://media.gettyimages.com/id/1452217651/video/sree-padmanabhaswamy-temple-in-thiruvananthapuram.mp4?s=mp4-640x640-gi&k=20&c=cbWCBPkkPxsqnJlRgTmLAmw1Cbvvc9RNKQ_1tCensio=" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="box-info-overlay">
+        "Padmanabhaswamy Temple - A Divine Marvel of Ancient Architecture, <br>Enshrining the Graceful Deity<br> Lord Vishnu and <br>Guarding Centuries of Rich Heritage <br>and Spiritual Devotion."
+      </div>
+      <div class="box-title">Padmanabhaswamy Temple</div>
+    </div>
+  </div>
+  
+
+  
+<div class="captivating-voyages-heading" id="captivating-voyages">CAPTIVATING VOYAGES</div>
+<div class="boxes-container">
+  <div class="checkbox-section">
+    <form class="checkbox-form">
+      <input type="checkbox" id="paragliding" name="paragliding">
+      <label for="paragliding">Paragliding</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="bamboo-rafting" name="bamboo-rafting">
+      <label for="bamboo-rafting">Bamboo Rafting</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="canoeing-kayaking" name="canoeing-kayaking">
+      <label for="canoeing-kayaking">Canoeing and Kayaking</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="waterfall-rappelling" name="waterfall-rappelling">
+      <label for="waterfall-rappelling">Waterfall Rappelling</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="snake-boat-race" name="snake-boat-race">
+      <label for="snake-boat-race">Snake Boat Race</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="kathakali-dance" name="kathakali-dance">
+      <label for="kathakali-dance">Kathakali Dance Performance</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="spice-plantation-tour" name="spice-plantation-tour">
+      <label for="spice-plantation-tour">Spice Plantation Tour</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="beach-camping" name="beach-camping">
+      <label for="beach-camping">Beach Camping</label>
+    </form>
+    <form class="checkbox-form">
+      <input type="checkbox" id="village-tour" name="village-tour">
+      <label for="village-tour">Village Tour</label>
+    </form>
+  </div>
+
+
+
+  <div class="boxes-container">
+    <div class="box" style="background-image: url('https://enjoyingthejourney.org/wp-content/uploads/2021/01/aaron-burden-G_1V58E0TyM-unsplash-768x576-1.jpg'); background-size: cover;" onclick="scrollToCaptivatingVoyages()">
+   <h3 style="color: white; font-weight: bold;">WALK<br>THROUGH THE <br>WOODS</h3>
+    </div>
+    
+    <div class="box" style="background-image: url('https://th.bing.com/th/id/OIP.HckaGIV-wZAk5yRUIb_vPgHaE7?pid=ImgDet&w=500&h=333&rs=1'); background-size: cover;" onclick="scrollToCaptivatingVoyages()">
+<h3 style="color: white; font-weight: bold;">TREKKING AND<br>HIKING</h3>
+    </div>
+    <div class="box" style="background-image: url('https://ebyqn4u95z4.exactdn.com/wp-content/uploads/Mortar_Pestle_Herbs_2-2048x1639.jpg?strip=all&lossy=1&ssl=1'); background-size: cover;" onclick="scrollToCaptivatingVoyages()">
+<h3 style="color: white; font-weight: bold;">REJUVENATE THROUGH<br>AYURVEDA</h3>
+    </div>
+  </div>
+<br><br>
+<div class="sacred-spectacles-heading" id="sacred-spectacles" style="text-align: center;">SACRED SPECTACLES</div>
+
+
+
+ 
+
+  <div class="boxes-container">
+    <div class="box" style="background-image: url('https://i.pinimg.com/originals/45/b5/33/45b53350b3378663804a12cd9fcfd4c3.jpg'); background-size: cover;">
+      <!-- Box content here -->
+<div class="box-title">THIRUVONAM</div>
+    </div>
+    <div class="box" style="background-image: url('https://i1.wp.com/www.keralam.me/wp-content/uploads/2019/03/thrissur_pooram.jpg?zoom=3&resize=800%2C445&ssl=1'); background-size: cover;">
+
+<div class="box-title">THRISSUR POORAM</div>
+
+    </div>
+    <div class="box" style="background-image: url('https://data1.ibtimes.co.in/en/full/735514/vishu-kani.png?h=450&l=50&t=40'); background-size: cover;">
+<div class="box-title">VISHU</div>
+
+    </div>
+  </div>
+</div>
+<footer>
+    <p>&copy; 2023 Explore Kerala. All rights reserved.</p>
+  </footer>
+   
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-8AQtXn2lVMgGga4o9fmvtz2OMMu7AdG7NhN+t6VJLoo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-QRHlOapFnKLzOScLE0eIGpOVKbGSD8Jz8Lj6QnfsC0MLJEx1fzFweFwv31pEHUzI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-rj84HQ5NXz5jfgeZFUru4FDaZs3yKV9p7XUp2lsD4ibpk5bKpa0az4PebmNIEf5M" crossorigin="anonymous"></script>
+
+  <script>
+    function scrollToParadiseBay() {
+      const paradiseBaySection = document.querySelector("#paradise-bay");
+      paradiseBaySection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToCaptivatingVoyages() {
+      const captivatingVoyagesSection = document.querySelector("#captivating-voyages");
+      captivatingVoyagesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  function scrollToSacredSpectacles() {
+    const sacredSpectaclesSection = document.querySelector("#sacred-spectacles");
+    sacredSpectaclesSection.scrollIntoView({ behavior: "smooth" });
+  }
+   
+  function scrollToSacredSpectacles() {
+      document.getElementById("sacred-spectacles").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
